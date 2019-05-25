@@ -1,8 +1,6 @@
 #include "mgos.h"
 #include "led_master.h"
 
-#include "led_master.h"
-
 typedef struct {
     uint8_t rings;
     uint32_t num_ringpix;
