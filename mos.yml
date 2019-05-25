@@ -10,13 +10,13 @@ filesystem:
   - fs
 
 config_schema:
-  - ["ledeffects.meteor_shower", "o", {title: ""}] 
-  - ["ledeffects.meteor_shower.timeout", "i", 15, {title: ""}]
-  - ["ledeffects.meteor_shower.rings", "i", 3, {title: ""}]
-  - ["ledeffects.meteor_shower.saturation", "d", 1.0, {title: ""}]
-  - ["ledeffects.meteor_shower.value", "d", 1.0, {title: ""}]
-  - ["ledeffects.meteor_shower.sleep", "i", 0, {title: ""}]
-  - ["ledeffects.meteor_shower.dim_all", "d", 0.33, {title: ""}]
+  - ["ledeffects.spiral_flash", "o", {title: ""}] 
+  - ["ledeffects.spiral_flash.timeout", "i", 15, {title: ""}]
+  - ["ledeffects.spiral_flash.rings", "i", 3, {title: ""}]
+  - ["ledeffects.spiral_flash.saturation", "d", 1.0, {title: ""}]
+  - ["ledeffects.spiral_flash.value", "d", 1.0, {title: ""}]
+  - ["ledeffects.spiral_flash.sleep", "i", 0, {title: ""}]
+  - ["ledeffects.spiral_flash.dim_all", "d", 0.33, {title: ""}]
 
 libs:
 
