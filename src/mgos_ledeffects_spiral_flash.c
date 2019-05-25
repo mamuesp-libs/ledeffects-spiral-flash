@@ -82,7 +82,7 @@ static void mgos_intern_spiral_flash_loop(mgos_rgbleds* leds)
                     }
                 }
             }
-            mgos_cd led-esal_led_show(leds);
+            mgos_universal_led_show(leds);
             mgos_msleep(mgos_sys_config_get_ledeffects_spiral_flash_sleep());
             leds->pix_pos = (leds->pix_pos + 1) % num_rows;
         }
