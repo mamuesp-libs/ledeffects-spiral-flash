@@ -69,22 +69,22 @@ static void mgos_intern_spiral_flash_loop(mgos_rgbleds* leds)
         int loops = spd->rings;
         while (loops--) {
             bool do_run = true;
-            mgos_rgbleds_clear(leds);
+            mgos_univeral_led_clear(leds);
             for (int row = 0; row < num_rows; row++) {
                 for (int col = 0; col < num_cols; col++) {
-//                        int color_pos = (((row + leds->pix_pos) * num_cols) + col) % spd->num_pix;
+//                    int color_pos = (((row + leds->pix_pos) * num_cols) + col) % spd->num_pix;
 //                    do_run = ((row * num_cols) + col >= leds->pix_pos) && ((row * num_cols) + col < (leds->pix_pos + spd->num_ringpix));
                     do_run = row >= leds->pix_pos && row < (leds->pix_pos + (int) round(spd->rings * 2.0 * spd->atd->level));
                     if (do_run) {
                         int col_pos = min((num_rows * 4) - 1, (int)round(num_rows * spd->atd->level * 4.0));
                         out_pix = spd->ring_colors[col_pos];
                         //LOG(LL_INFO, ("mgos_intern_spiral_flash_loop:\tPos: %d\tX: %d\tY: %d\tR: 0x%.02X\tG: 0x%.02X\tB: 0x%.02X", leds->pix_pos, col, row, out_pix.r, out_pix.g, out_pix.b));
-                        mgos_rgbleds_plot_pixel(leds, col, num_rows - 1 - row, out_pix, false);
+                        mgos_univeral_led_plot_pixel(leds, col, num_rows - 1 - row, out_pix, false);
                         mgos_wdt_feed();
                     }
                 }
             }
-            mgos_rgbleds_show(leds);
+            mgos_univeral_led_show(leds);
             mgos_msleep(mgos_sys_config_get_ledeffects_spiral_flash_sleep());
             leds->pix_pos = (leds->pix_pos + 1) % num_rows;
         }

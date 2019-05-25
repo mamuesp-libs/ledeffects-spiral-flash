@@ -12,9 +12,10 @@ filesystem:
 config_schema:
   - ["ledeffects.meteor_shower", "o", {title: ""}] 
   - ["ledeffects.meteor_shower.timeout", "i", 15, {title: ""}]
-  - ["ledeffects.meteor_shower.size", "i", 20, {title: ""}]
-  - ["ledeffects.meteor_shower.trail_decay", "d", 0.35, {title: ""}]
-  - ["ledeffects.meteor_shower.random_decay", "b", true, {title: ""}]
+  - ["ledeffects.meteor_shower.rings", "i", 3, {title: ""}]
+  - ["ledeffects.meteor_shower.saturation", "d", 1.0, {title: ""}]
+  - ["ledeffects.meteor_shower.value", "d", 1.0, {title: ""}]
+  - ["ledeffects.meteor_shower.sleep", "i", 0, {title: ""}]
   - ["ledeffects.meteor_shower.dim_all", "d", 0.33, {title: ""}]
 
 libs:
