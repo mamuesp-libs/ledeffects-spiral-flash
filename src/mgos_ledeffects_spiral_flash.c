@@ -82,7 +82,7 @@ static void mgos_intern_spiral_flash_loop(mgos_rgbleds* leds)
                     }
                 }
             }
-            mgos_universal_led_show(leds);
+            mgos_cd led-esal_led_show(leds);
             mgos_msleep(mgos_sys_config_get_ledeffects_spiral_flash_sleep());
             leds->pix_pos = (leds->pix_pos + 1) % num_rows;
         }
@@ -116,7 +116,7 @@ void mgos_ledeffects_spiral_flash(void* param, mgos_rgbleds_action action)
     }
 }
 
-bool mgos_spiral_flash_init(void) {
+bool mgos_ledeffects_spiral_flash_init(void) { 
   LOG(LL_INFO, ("mgos_spiral_flash_init ..."));
   ledmaster_add_effect("ANIM_SPIRAL_FLASH", mgos_ledeffects_spiral_flash);
   return true;
