@@ -1,0 +1,25 @@
+author: M.Mueller-Spaeth "mamuesp" <fms1961@gmail.com>
+type: lib
+description: A VU meter with RGB LEDs
+version: 1.0
+
+sources:
+  - src
+
+filesystem:
+  - fs
+
+config_schema:
+  - ["ledeffects.meteor_shower", "o", {title: ""}] 
+  - ["ledeffects.meteor_shower.timeout", "i", 15, {title: ""}]
+  - ["ledeffects.meteor_shower.size", "i", 20, {title: ""}]
+  - ["ledeffects.meteor_shower.trail_decay", "d", 0.35, {title: ""}]
+  - ["ledeffects.meteor_shower.random_decay", "b", true, {title: ""}]
+  - ["ledeffects.meteor_shower.dim_all", "d", 0.33, {title: ""}]
+
+libs:
+
+tags:
+  - c
+
+manifest_version: 2017-09-29

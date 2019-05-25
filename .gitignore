@@ -1,0 +1,6 @@
+.DS_Store
+deps
+build
+.git
+.history
+.vscode
